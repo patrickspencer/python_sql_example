@@ -17,7 +17,7 @@
   the port is probably "5432".
 - Run `python make_db_table.py` in the terminal. If there were no
     problems then you should see a bunch of jargon about sql and the
-    last line should say something about an sql alchemy engine commit.
+    last line should say something about an sqlalchemy engine commit.
 - Modify the `addrows.py` file to add rows to the database.
 
 # Interacting with the db
