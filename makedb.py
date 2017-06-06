@@ -1,5 +1,6 @@
 import models
 from models import engine
 
-#this next line creates the database if it doesn't exists already
+# This next line creates the table if it doesn't exists already.
+# The database specified in setting.py must already exist before you run this.
 models.EmployeeInfo.metadata.create_all(engine)

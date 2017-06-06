@@ -1,12 +1,9 @@
 import settings
 import datetime
-from sqlalchemy.orm import relationship
-from sqlalchemy import exists
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Column, Integer, DateTime, \
-        String, Float
+from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy import create_engine, inspect, desc, exists
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import Column, Integer, DateTime, String, Float
 
 engine = create_engine(settings.DATABASE_URI, echo=True)
 Session = sessionmaker(bind=engine)
