@@ -1,4 +1,4 @@
-# Make db
+# Make db table and adding rows
 
 - Alter the file `models.py` so the attributes in the class
   `EmploymentInfo` match the columns you want in your data base. If you
@@ -26,7 +26,7 @@ print(third_employee.employee_name)
 >>> Bob
 all_employees = dbsession.query(EmployeeInfo).all()
 for employee in all_employees:
-  print(employee.id)
+    print(employee.id)
 >>> 1
 >>> 2
 .  
@@ -37,7 +37,7 @@ for employee in all_employees:
 [More sqlalchemy examples](http://docs.sqlalchemy.org/en/latest/orm/tutorial.html)
 
 
-## Using raw sql
+## Using raw sql queries
 ```python
 from models import engine
 res = engine.execute('SELECT * FROM employee_info;').fetchall()
