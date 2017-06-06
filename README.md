@@ -1,18 +1,23 @@
 # Make db table and adding rows
 
-- Alter the file `models.py` so the attributes in the class
-  `EmploymentInfo` match the columns you want in your data base. If you
+- Install sqlalchemy: `pip install sqlalchemy`.
+- Figure out what you want your columns to be in your database table. 
+  You have to alter the file `models.py` so the attributes in the class
+  match the columns you want in your data base. In this example the
+  class that models your data is called `EmploymentInfo`. If you
   change the name `EmploymentInfo` in `models.py` then also change the
-  references to it in `makedb.py` and `addrows.py`.
+  references to it in `make_db_table.py` and `addrows.py`.
 - Create your database. In this example it's called "fed_employment".
   With postgres you can go into your terminal, type `psql` and then
   enter `CREATE DATABASE fed_employment;` (don't forget the semicolon,
-  like I do so often) 
+  like I do so often). The database must be created before you run
+  `make_db_table.py`
 - Change database connection info in `settings.py`. If you connect to
   postgres on your computer then the host is probably "localhost" and
   the port is probably "5432".
-- Run `python makedb.py` in the terminal to tell postgres to make the
-  table specified in your `models.py` file.
+- Run `python make_db_table.py` in the terminal. If there were no
+    problems then you should see a bunch of jargon about sql and the
+    last line should say something about an sql alchemy engine commit.
 - Modify the `addrows.py` file to add rows to the database.
 
 # Interacting with the db
